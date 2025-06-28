@@ -1,14 +1,15 @@
 <html>
 
 <body>
-    <H1>@{{ $name }}</H1>
+    {{-- give massage if  name or password is ERROR --}}
 
-    {{-- @untuk disable scho atau {{  }} --}}
-    @verbatim
-        Hello {{ $name }}
-        Hello {{ $name }}
-    @endverbatim
+    @error('name')
+        <p>{{ $massage }}</p>
+    @enderror
 
+    @error('password')
+        <p>{{ $massage }}</p>
+    @enderror
 </body>
 
 </html>
