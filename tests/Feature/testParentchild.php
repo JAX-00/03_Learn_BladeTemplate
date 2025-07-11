@@ -10,7 +10,7 @@ class testParentchild extends TestCase
 {
     public function testInheritance()
     {
-        $this->view("childparent", [])->assertSeeText("Nama Aplikasi - Halaman Utama")->assertSeeText("Deskripsi Header")->assertSeeText("Ini adalah halaman utama");
+        $this->view("childparent", [])->assertSeeText("Nama Aplikasi - Halaman Utama")->assertSeeText("Deskripsi Header")->assertSeeText("Default Header")->assertSeeText("Default Content")->assertSeeText("Ini adalah halaman utama");
     }
     public function testInheritanceWithoutOverride()
     {
